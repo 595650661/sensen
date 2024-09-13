@@ -1,4 +1,4 @@
-import './assets/main.css'
+
 
 import { createApp } from 'vue' // 引入 createApp 用于创建应用
 import App from './App.vue' // 根组件
