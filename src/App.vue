@@ -1,68 +1,25 @@
 <template>
-  <div class="container">
-    <el-table :data="tableData" stripe border style="width: 100%">
-      <el-table-column prop="date" label="Date" width="180" />
-      <el-table-column prop="name" label="Name" width="180" />
-      <el-table-column prop="address" label="Address" />
-    </el-table>
+
+  <!-- <img src="./assets/images/sensen.jpg" mode="scaleToFill"
+        style="width: 200px; height: 200px;background-color: red" /> -->
+  <div class="block text-center" style="text-align:center; width: 100%; height: 100%">
+    <el-carousel trigger="click" type="card">
+      <el-carousel-item v-for="item in imageUrl" :key="item">
+        <img :src="item.url" alt="" />
+      </el-carousel-item>
+    </el-carousel>
   </div>
+
 </template>
 <script setup
   lang="ts">
   import { ref, reactive } from 'vue'
-  const tableData = [
-    {
-      date: '2016-05-03',
-      name: 'Tom',
-      address: 'No. 189, Grove St, Los Angeles',
-    },
-    {
-      date: '2016-05-02',
-      name: 'Tom',
-      address: 'No. 189, Grove St, Los Angeles',
-    },
-    {
-      date: '2016-05-04',
-      name: 'Tom',
-      address: 'No. 189, Grove St, Los Angeles',
-    },
-    {
-      date: '2016-05-01',
-      name: 'Tom',
-      address: 'No. 189, Grove St, Los Angeles',
-    },
-  ]
+  const imageUrl = [
+    { url: "http://www.gengdan.cn/wp-content/uploads/2023/03/2023030921323441.jpg" },
+    { url: "http://www.gengdan.cn/wp-content/uploads/2023/03/2023030921333114.jpg" },
+    { url: "http://www.gengdan.cn/wp-content/uploads/2023/03/2023030921323441.jpg" },
+    { url: "http://www.gengdan.cn/wp-content/uploads/2023/03/2023030921325368.jpg" }]
+
 </script>
 <style scoped
-  lang="scss">
-
-
-  .container {
-    width: 800px;
-    height: 400px;
-    background-color: #eee
-  }
-
-  .el-steps {
-    background-color: aliceblue;
-  }
-
-
-  @media (min-width: 1024px) {
-    header {
-      display: flex;
-      place-items: center;
-      padding-right: calc(var(--section-gap) / 2);
-    }
-
-    .logo {
-      margin: 0 2rem 0 0;
-    }
-
-    header .wrapper {
-      display: flex;
-      place-items: flex-start;
-      flex-wrap: wrap;
-    }
-  }
-</style>
+  lang="scss"></style>

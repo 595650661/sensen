@@ -1,6 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
 
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv, ConfigEnv, UserConfig } from 'vite';
 import vue from '@vitejs/plugin-vue'
 
 
@@ -17,6 +17,14 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
+  },
+  css: {
+    preprocessorOptions: {
+      // 加载全局 scss
+      scss: {
+        additionalData: `@import "./src/styles/glob.scss";`
+      }
     }
   }
 })
