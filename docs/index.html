@@ -1,13 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
-    <script type="module" crossorigin src="/sensen/assets/index-BPkUC3YV.js"></script>
-    <link rel="stylesheet" crossorigin href="/sensen/assets/index-BCmxIOUk.css">
+    <title>sensen App</title>
+    <script type="module" crossorigin src="/sensen/assets/index-DcxuKRPe.js"></script>
+    <link rel="stylesheet" crossorigin href="/sensen/assets/index-DRZpSP_t.css">
   </head>
+<style lang="scss">
+  .browser-check-alert {
+    padding: 8px 20px;
+    background: #f0f2f5;
+    text-align: center;
+    position: relative;
+    z-index: 9999;
+  }
+
+  .browser-check-alert span {
+    font-weight: 600;
+  }
+
+  .browser-check-alert .download-button {
+    margin-left: 16px;
+    background-color: #1677ff;
+    border: 1px solid #1677ff;
+    color: #fff;
+    padding: 9px;
+  }
+
+  .browser-check-alert .close-button {
+    background-color: #f0f2f5;
+    border: 1px solid #f0f2f5;
+    font-weight: 600;
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    top: 12px;
+  }
+
+  .browser-check-alert button:hover {
+    cursor: pointer;
+  }
+</style>
+
+
+
   <body>
+  <div id="browserCheckAlert" style="display: none" class="browser-check-alert">
+    <span>为了保障您的用户体验，建议使用Chrome浏览器！</span>
+    <button class="download-button" type="button" onclick="downloadChrome()">立即下载</button>
+    <button class="close-button" type="button" onclick="closeAlert()">&times;</button>
+  </div>
+
+
     <div id="app"></div>
+
+      <script type="text/javascript">
+    (function () {
+      // 获取浏览器 userAgent
+      var ua = navigator.userAgent;
+      // 是否为 IE
+      var isIE = ua.indexOf('compatible') > -1 && ua.indexOf('MSIE') > -1 && ua.indexOf('opr') === -1;
+      var isIE11 = ua.indexOf('Trident') > -1 && ua.indexOf('rv:11.0') > -1;
+      if (isIE || isIE11) {
+        document.getElementById('browserCheckAlert').style.display = 'block';
+      }
+    })();
+    function downloadChrome() {
+      window.open('https://www.google.cn/intl/zh-CN/chrome', '_blank');
+    }
+    function closeAlert() {
+      document.getElementById('browserCheckAlert').style.display = 'none';
+    }
+  </script>
   </body>
 </html>
