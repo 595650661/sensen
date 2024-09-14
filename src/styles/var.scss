@@ -1,7 +1,7 @@
 // width <= 1200px时，body宽度为1200px
 @media screen and (width <= 1200px){
     body {
-        width: 1200px !important;
+        // width: 1200px !important;
         overflow-x: scroll;
     }
 }
