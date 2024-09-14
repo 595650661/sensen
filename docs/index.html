@@ -1,62 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sensen App</title>
-    <script type="module" crossorigin src="/sensen/assets/index-NtnIX4tl.js"></script>
-    <link rel="stylesheet" crossorigin href="/sensen/assets/index-DRZpSP_t.css">
-  </head>
-<style lang="scss">
-  .browser-check-alert {
-    padding: 8px 20px;
-    background: #f0f2f5;
-    text-align: center;
-    position: relative;
-    z-index: 9999;
-  }
-
-  .browser-check-alert span {
-    font-weight: 600;
-  }
-
-  .browser-check-alert .download-button {
-    margin-left: 16px;
-    background-color: #1677ff;
-    border: 1px solid #1677ff;
-    color: #fff;
-    padding: 9px;
-  }
-
-  .browser-check-alert .close-button {
-    background-color: #f0f2f5;
-    border: 1px solid #f0f2f5;
-    font-weight: 600;
-    font-size: 20px;
-    position: absolute;
-    right: 20px;
-    top: 12px;
-  }
-
-  .browser-check-alert button:hover {
-    cursor: pointer;
-  }
-</style>
-
-
-
-  <body>
-  <div id="browserCheckAlert" style="display: none" class="browser-check-alert">
-    <span>为了保障您的用户体验，建议使用Chrome浏览器！</span>
-    <button class="download-button" type="button" onclick="downloadChrome()">立即下载</button>
-    <button class="close-button" type="button" onclick="closeAlert()">&times;</button>
-  </div>
-
-
-    <div id="app"></div>
-
-      <script type="text/javascript">
-    (function () {
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>森森の写真</title><script type="module" crossorigin src="/sensen/assets/index-CPBRMvgC.js"></script><link rel="stylesheet" crossorigin href="/sensen/assets/index-DJSYhaNo.css"></head><style lang="scss">.browser-check-alert{padding:8px 20px;background:#f0f2f5;text-align:center;position:relative;z-index:9999}.browser-check-alert span{font-weight:600}.browser-check-alert .download-button{margin-left:16px;background-color:#1677ff;border:1px solid #1677ff;color:#fff;padding:9px}.browser-check-alert .close-button{background-color:#f0f2f5;border:1px solid #f0f2f5;font-weight:600;font-size:20px;position:absolute;right:20px;top:12px}.browser-check-alert button:hover{cursor:pointer}</style><body><div id="browserCheckAlert" style="display:none" class="browser-check-alert"><span>为了保障您的用户体验，建议使用Chrome浏览器！</span> <button class="download-button" type="button" onclick="downloadChrome()">立即下载</button> <button class="close-button" type="button" onclick="closeAlert()">&times;</button></div><div id="app"></div><script>(function () {
       // 获取浏览器 userAgent
       var ua = navigator.userAgent;
       // 是否为 IE
@@ -71,7 +13,4 @@
     }
     function closeAlert() {
       document.getElementById('browserCheckAlert').style.display = 'none';
-    }
-  </script>
-  </body>
-</html>
+    }</script></body></html>

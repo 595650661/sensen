@@ -1,11 +1,17 @@
 {
   "extends": "@tsconfig/node20/tsconfig.json",
   "include": [
-    "vite.config.*",
-    "vitest.config.*",
-    "cypress.config.*",
-    "nightwatch.conf.*",
-    "playwright.config.*"
+    "src/**/*.ts",
+    "src/**/**/*.ts",
+    "src/**/**/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/**/**/*.vue",
+    "src/**/**/**/*.vue",
+    "src/**/**/**/**/*.vue",
+    "*.ts",
+    "vite.config.ts"
   ],
   "compilerOptions": {
     "composite": true,
